@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Question = ({display}) => {
+const Question = (props, display) => {
     const [items, setItems] = useState([]);
     const [answers, setAnswer] = useState([]);
 
@@ -21,11 +21,13 @@ const Question = ({display}) => {
 
         if (localStorage.getItem("quesJson") === null) {
             quesJsonArray.push(item);
+            props.showAlert("Question added successfully!","info");
             localStorage.setItem("quesJson", JSON.stringify(quesJsonArray));
         } else {
             const quesJsonArrayStr = localStorage.getItem("quesJson");
             quesJsonArray = JSON.parse(quesJsonArrayStr);
             quesJsonArray.push(item);
+            props.showAlert("Question added successfully!","info");
             localStorage.setItem("quesJson", JSON.stringify(quesJsonArray));
         }
         update();
@@ -50,12 +52,14 @@ const Question = ({display}) => {
         let quesJsonArray = JSON.parse(quesJsonArrayStr);
         quesJsonArray.splice(itemIndex, 1);
         localStorage.setItem("quesJson", JSON.stringify(quesJsonArray));
+        props.showAlert("Question deleted successfully!", "warning");
         update();
     };
 
     const clearStorage = () => {
         if (window.confirm("Do you really want to clear?")) {
             localStorage.clear();
+            props.showAlert("Storage cleared successfully!", "dark");
             update();
         }
     };
@@ -152,11 +156,13 @@ const Question = ({display}) => {
                                                     if(element[5]===document.getElementById(`answer-${index}`).value)
                                                     {
                                                         newanswer[index]="correct"
+                                                        props.showAlert("Congrats! Your answer is Correct.", "success")
                                                         setAnswer(newanswer)
                                                     }
                                                     else
                                                     {
                                                         newanswer[index]="wrong"
+                                                        props.showAlert("Sorry! Your answer is incorrect.", "danger")
                                                         setAnswer(newanswer)
                                                     }
                                                 }}
