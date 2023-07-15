@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepEasy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">PrepEasy</a>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="#" class="navbar-link">Home</a></li>
+                <li class="navbar-item"><a href="#" class="navbar-link">Questions</a></li>
+                <li class="navbar-item"><a href="#" class="navbar-link">About</a></li>
+                <li class="navbar-item"><a href="#" class="navbar-link">Contact</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <h1>Welcome to PrepEasy</h1>
+            <h3>Add a Question (Admin)</h3>
+            <form class="question-form">
+                <input type="text" class="question-input" placeholder="Question" required>
+                <input type="text" class="option-input" placeholder="Option 1" required>
+                <input type="text" class="option-input" placeholder="Option 2" required>
+                <input type="text" class="option-input" placeholder="Option 3" required>
+                <input type="text" class="option-input" placeholder="Option 4" required>
+                <select class="question-type" required>
+                    <option value="" disabled selected>Select Question Type</option>
+                    <option value="multiple-choice">Multiple Choice</option>
+                    <option value="true-false">True/False</option>
+                </select>
+                <button type="submit" class="submit-button">Add Question</button>
+            </form>
+
+            <h3>View Questions (User)</h3>
+            <div class="question-list">
+                <div class="question">
+                    <h4 class="question-title">Question 1</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti sit reiciendis, sed officia suscipit deleniti ea illo repudiandae voluptatum animi nobis expedita aspernatur quas praesentium aut, consectetur quo ipsam magnam!</p>
+                    <ul class="options">
+                      <li class="option"><input type="radio">Option 1</li>
+                      <li class="option"><input type="radio">Option 2</li>
+                      <li class="option"><input type="radio">Option 3</li>
+                      <li class="option"><input type="radio">Option 4</li>
+                    </ul>
+                    <div class="question-actions">
+                        <button class="bookmark-button">Bookmark</button>
+                        <button class="like-button">Like</button>
+                    </div>
+                </div>
+                <div class="question">
+                    <h4 class="question-title">Question 2</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo repellat laborum consectetur quidem veniam asperiores id quas non, facere repellendus, qui odio aperiam neque sequi vero tempore ea blanditiis! Nisi!</p>
+                    <ul class="options">
+                      
+                        <li class="option"><input type="radio">Option 1</li>
+                        <li class="option"><input type="radio">Option 2</li>
+                        <li class="option"><input type="radio">Option 3</li>
+                        <li class="option"><input type="radio">Option 4</li>
+                    </ul>
+                    <div class="question-actions">
+                        <button class="bookmark-button">Bookmark</button>
+                        <button class="like-button">Like</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-logo">
+              <a href="#" class="footer-logo-link">PrepEasy</a>
+          </div>
+          <div class="footer-social">
+              <a href="https://www.facebook.com/prepeasy" target="_blank"><img src="facebook-logo.png" alt="Facebook"></a>
+              <a href="https://www.linkedin.com/company/prepeasy" target="_blank"><img src="linkedin-logo.png" alt="LinkedIn"></a>
+              <a href="https://www.instagram.com/prepeasy" target="_blank"><img src="instagram-logo.png" alt="Instagram"></a>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy;2023 PrepEasy. All rights reserved.</p>
+      </div>
+  </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
