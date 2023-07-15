@@ -6,7 +6,8 @@ const Question = ({display}) => {
 
     useEffect(() => {
         update();
-    }, []);
+        setAnswer(new Array(items.length).fill("Not Checked"));
+    }, [items]);
 
     const getAndUpdate = () => {
         const title = document.getElementById("title").value;
@@ -29,6 +30,7 @@ const Question = ({display}) => {
             localStorage.setItem("quesJson", JSON.stringify(quesJsonArray));
         }
         update();
+        setAnswer(prev => [...prev, "Not Checked"]);
     };
 
     const update = () => {
@@ -51,6 +53,7 @@ const Question = ({display}) => {
         quesJsonArray.splice(itemIndex, 1);
         localStorage.setItem("quesJson", JSON.stringify(quesJsonArray));
         update();
+        setAnswer(prev => prev.filter((_, index) => index !== itemIndex));
     };
 
     const clearStorage = () => {
@@ -59,61 +62,31 @@ const Question = ({display}) => {
             update();
         }
     };
+
     const style={"display": display?"":"none"};
     return (
         <div>
-
-            <div >
+            <div>
                 <div>Add question</div>
-
-                <div >
+                <div>
                     <label htmlFor="title">Question</label>
-                    <input
-                        type="text"
-                        id="title"
-                        aria-describedby="emailHelp"
-                    />
+                    <input type="text" id="title" aria-describedby="emailHelp" />
                 </div>
-
-                <div >
+                <div>
                     <label htmlFor="description">Option 1</label>
-                    <input
-                        type="text"
-                        id="option1"
-                    ></input>
+                    <input type="text" id="option1" />
                     <label htmlFor="description">Option 2</label>
-                    <input
-                        type="text"
-                        id="option2"
-                    ></input>
-                    <label htmlFor="description">Opption 3</label>
-                    <input
-                        type="text"
-                        id="option3"
-                    ></input>
+                    <input type="text" id="option2" />
+                    <label htmlFor="description">Option 3</label>
+                    <input type="text" id="option3" />
                     <label htmlFor="description">Option 4</label>
-                    <input
-                        type="text"
-                        id="option4"
-                    ></input>
-                    <br/>
+                    <input type="text" id="option4" />
+                    <br />
                     <label type="text">correct option (type 1, 2, 3, or 4, only one correct)</label>
-                    <input type="text" id="correctans"></input>
+                    <input type="text" id="correctans" />
                 </div>
-
-                <button
-                    id="add"
-                    onClick={getAndUpdate}
-                >
-                    Add
-                </button>
-                <button
-                    id="clear"
-                    onClick={clearStorage}
-                >
-                    Clear all
-                </button>
-
+                <button id="add" onClick={getAndUpdate}>Add</button>
+                <button id="clear" onClick={clearStorage}>Clear all</button>
                 <div id="items" style={style}>
                     <div>Questions</div>
                     <table border="">
@@ -147,36 +120,24 @@ const Question = ({display}) => {
                                     <td>
                                         <button
                                             onClick={() => {
-                                                let newanswer=[...answers]
-                                                    console.log(document.getElementById(`answer-${index}`).value)
-                                                    if(element[5]===document.getElementById(`answer-${index}`).value)
-                                                    {
-                                                        newanswer[index]="correct"
-                                                        setAnswer(newanswer)
-                                                    }
-                                                    else
-                                                    {
-                                                        newanswer[index]="wrong"
-                                                        setAnswer(newanswer)
-                                                    }
-                                                }}
+                                                let newanswer = [...answers];
+                                                if(element[5] === document.getElementById(`answer-${index}`).value) {
+                                                    newanswer[index] = "correct";
+                                                }
+                                                else {
+                                                    newanswer[index] = "wrong";
+                                                }
+                                                setAnswer(newanswer);
+                                            }}
                                         >
-                                            check answer
+                                            Check answer
                                         </button>                                            
                                     </td>
                                     <td>
-                                        <div>
-                                            {
-                                                answers[index]
-                                            }
-                                        </div>
+                                        <div>{answers[index]}</div>
                                     </td>
                                     <td>
-                                        <button
-                                            onClick={() => deleted(index)}
-                                            >
-                                            Delete
-                                        </button>
+                                        <button onClick={() => deleted(index)}>Delete</button>
                                     </td>
                                 </tr>
                             ))}
@@ -189,16 +150,3 @@ const Question = ({display}) => {
 };
 
 export default Question;
-
-// if(element[4]===document.getElementById(`answer-${index}`).value)
-// {
-//     const newanswer=answers
-//     newanswer[index]="correct"
-//     setAnswer(newanswer)
-// }
-// else
-// {
-//     const newanswer=answers
-//     newanswer[index]="correct"
-//     setAnswer(newanswer)
-// }
