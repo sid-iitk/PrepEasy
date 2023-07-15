@@ -1,0 +1,184 @@
+/* CSS for the navigation bar */
+.navbar {
+    background-color: #183b56;
+    color: #fff;
+    height: 60px;
+    padding: 0 20px;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar-item {
+    margin: 0;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 200px;
+    height: 16px;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-button {
+    background-color: #2294ed;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+/* CSS for the main content */
+.main-content {
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+h1, h3 {
+    margin-bottom: 20px;
+}
+
+.question-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+}
+
+.question-input,
+.option-input,
+.question-type {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-button {
+    background-color: #2294ed;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.question-list {
+    display: grid;
+    gap: 20px;
+}
+
+.question {
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.question-title {
+    margin-bottom: 10px;
+}
+
+.options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.option {
+    margin-bottom: 4px;
+}
+
+.question-actions {
+    margin-top: 10px;
+}
+
+.bookmark-button,
+.like-button {
+    background-color: #2294ed;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+/* CSS for the footer */
+.footer {
+    background-color: #183b56;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-logo-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    background-color: #12263d;
+    padding: 8px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
