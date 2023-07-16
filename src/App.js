@@ -1,11 +1,10 @@
-import Question from './myComponents/Question';
 import './App.css';
-
+import LoginPage from './login';
 function App() 
 {
     return (
     <div>
-        <Question display={1}/>
+        <LoginPage />
 
     </div>
   );

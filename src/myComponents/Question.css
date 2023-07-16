@@ -1,0 +1,93 @@
+.question-section {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+  }
+  
+  .question-heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .question-inputs {
+    margin-bottom: 15px;
+  }
+  
+  .question-inputs label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .question-inputs input[type="text"] {
+    width: 95vw;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .question-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .question-buttons button {
+    width: 20vw;
+    background-color: #3f51b5;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .question-buttons button:hover {
+    background-color: #303f9f;
+  }
+  
+  .question-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .question-table th,
+  .question-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .question-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .question-table tr:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .question-table input[type="text"] {
+    width: auto;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .question-table button {
+    background-color: #e91e63;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .question-table button:hover {
+    background-color: #c2185b;
+  }
+  
